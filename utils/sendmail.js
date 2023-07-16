@@ -17,7 +17,7 @@ module.exports = function (email, subject, message) {
   });
 
   let mailDetails = {
-    from: "eshopmern@gmail.com",
+    from: process.env.gmail_user_auth,
     to: email,
     subject: subject,
     text: message,
