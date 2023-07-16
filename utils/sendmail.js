@@ -3,17 +3,11 @@ const nodemailer = require("nodemailer");
 
 module.exports = function (email, subject, message) {
   let mailTransporter = nodemailer.createTransport({
-    host: process.env.gmail_host, // hostname
-    service: "gmail",
-    secureConnection: false, // TLS requires secureConnection to be false
-    port: 587, // port for secure SMTP
-    tls: {
-      ciphers: "SSLv3",
-    },
+    service: 'gmail',
     auth: {
-      user: process.env.gmail_user_auth,
-      pass: process.env.gmail_user_pass,
-    },
+        user: 'foobar@gmail.com',
+        pass: 'foobar'
+    }
   });
 
   let mailDetails = {
